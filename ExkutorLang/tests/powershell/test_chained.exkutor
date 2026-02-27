@@ -1,0 +1,3 @@
+run_chain: "New-Item -ItemType Directory -Path $env:TEMP\\exkutor_chain -Force" -> target: powershell
+run_chain: "New-Item -ItemType File -Path $env:TEMP\\exkutor_chain\\chain_result.txt -Force" -> target: powershell
+assert_exists: "$env:TEMP\\exkutor_chain\\chain_result.txt" -> target: powershell

@@ -1,0 +1,3 @@
+run_chain: "mkdir -p /tmp/exkutor_chain_test" -> target: wsl
+run_chain: "cd /tmp/exkutor_chain_test && touch chain_result.txt" -> target: wsl
+assert_exists: "/tmp/exkutor_chain_test/chain_result.txt" -> target: wsl
