@@ -1,0 +1,2 @@
+run_shell: "dir $env:TEMP" -> target: powershell
+assert_exists: "$env:TEMP" -> target: powershell

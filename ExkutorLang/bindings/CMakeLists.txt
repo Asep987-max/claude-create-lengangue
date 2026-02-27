@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.20)
+project(exkutor_bindings LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+find_package(pybind11 REQUIRED)
+pybind11_add_module(exkutor_core_binding exkutor_bindings.cpp)
+target_link_libraries(exkutor_core_binding PRIVATE exkutor_core)
+target_include_directories(exkutor_core_binding PRIVATE ../core_execution/include)
